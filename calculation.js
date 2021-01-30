@@ -1,3 +1,4 @@
+// ticket count and total calculation part
 function clickAction(increase, CaptureInput, inputId) {
     var newTicketNumbers = CaptureInput;
     if (increase == false && newTicketNumbers > 0) {
@@ -27,7 +28,7 @@ function captureAndConvertNum(id) {
     var convertValueNumber = parseInt(captureValue);
     return convertValueNumber;
 }
-
+// booking Summary 
 document.getElementById('booking-btn').addEventListener('click', function(){
     document.getElementById('bookingInformation').style.display = 'none';
     document.getElementById('information-summary').style.display = 'block';
