@@ -11,7 +11,8 @@
         rel="stylesheet">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="all.min.css">
 </head>
 
@@ -30,7 +31,7 @@
 
     <!--Booking Section-->
     <main class="container">
-        <section class="main-content">
+        <section id="bookingInformation" class="main-content">
             <div class="booking-form">
                 <h3>Booking Flights</h3>
                 <div class="input-group">
@@ -54,11 +55,15 @@
                 <div class="input-group f-class">
                     <div>
                         <label for="">First Class ($150)</label>
-                        <input id="firstClass-ticket" class="inp-style inp-width" type="number" name=""value="0">
+                        <input id="firstClass-ticket" class="inp-style inp-width" type="number" name="" value="0">
                     </div>
                     <div class="plus-minus-btn">
-                        <button id="firstClass-plus-btn" class="btn btn-primary"><i class="fas fa-plus"></i></button>
-                        <br><button id="firstClass-minus-btn" class="btn btn-primary"><i class="fas fa-minus"></i></button>
+                        <button
+                            onclick="clickAction(true, captureAndConvertNum('firstClass-ticket'), 'firstClass-ticket');"
+                            class="btn btn-primary"><i class="fas fa-plus"></i></button>
+                        <br><button
+                            onclick="clickAction(false, captureAndConvertNum('firstClass-ticket'), 'firstClass-ticket');"
+                            class="btn btn-primary"><i class="fas fa-minus"></i></button>
                     </div>
                 </div>
 
@@ -68,8 +73,11 @@
                         <input id="economy-ticket" class="inp-style inp-width" type="number" name="" value="0">
                     </div>
                     <div class="plus-minus-btn">
-                        <button id="economy-plus-btn" class="btn btn-primary"><i class="fas fa-plus"></i></button>
-                        <br><button id="economy-minus-btn" class="btn btn-primary"><i class="fas fa-minus"></i></button>
+                        <button onclick="clickAction(true, captureAndConvertNum('economy-ticket'), 'economy-ticket');"
+                            class="btn btn-primary"><i class="fas fa-plus"></i></button>
+                        <br><button
+                            onclick="clickAction(false, captureAndConvertNum('economy-ticket'), 'economy-ticket');"
+                            class="btn btn-primary"><i class="fas fa-minus"></i></button>
                     </div>
                 </div>
                 <div class="calculations">
@@ -100,19 +108,132 @@
                         </div>
                     </div>
                 </div>
-                <button class="btn-style">Book Now</button>
+                <button id="booking-btn" class="btn-style">Book Now</button>
             </div>
 
             <div class="booking-content">
                 <h1 style="color: rgb(0, 0, 0);">discover <br>around the world</h1>
-                <p style="color: rgb(0, 0, 0);">Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias
+                <p style="color: rgb(0, 0, 0);">Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident
+                    voluptatibus quam fuga laborumalias
                     veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt
                     nobise voluptatibus quam</p>
+            </div>
+            </div>
+        </section>
+        <section id="information-summary">
+            <div class="head-text">
+                <h1><span style="color: #2cf15d;">Thank you,</span>your booking complete <span style="color: #2cf15d;"><i class="fas fa-check-circle"></i></span></h1>
+                <h5>Your confirmation number is <span style="color: #2cf15d;">1930599964</span></h5>
+            </div>
+            <div class="information-style">
+                <h3>Booking Summary</h3>
+                <hr>
+                <div style="text-align: center;">
+                    <h1>Discovery Fly Airlines</h1>
+                    <h5><span style="color: #2cf15d;"><i class="fas fa-map-marker-alt"></i></span> Bangladesh</h5>
+                    <p style="color: #2cf15d;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+                </div>
+                <hr>
+                <div>
+                    <h4 style="color: #2cf15d; margin-bottom: 20px;">Summary</h4>
+                    <div class="amount">
+                        <div class="left">
+                            <p>Flying From</p>
+                        </div>
+                        <div class="right">
+                            <p>Dhaka,Bangladesh</p>
+                        </div>
+                    </div>
+                    <div class="amount">
+                        <div class="left">
+                            <p>Flying To</p>
+                        </div>
+                        <div class="right">
+                            <p>Khulna</p>
+                        </div>
+                    </div>
+                    <div class="amount">
+                        <div class="left">
+                            <p>Departure</p>
+                        </div>
+                        <div class="right">
+                            <p>10/12/2019</p>
+                        </div>
+                    </div>
+                    <div class="amount">
+                        <div class="left">
+                            <p>Return</p>
+                        </div>
+                        <div class="right">15/12/2019</div>
+                    </div>
+                    <div class="amount">
+                        <div class="left">
+                            <p>First Class Ticket Price</p>
+                        </div>
+                        <div class="right">
+                            <p>$150</p>
+                        </div>
+                    </div>
+                    <div class="amount">
+                        <div class="left">
+                            <p>First Class Ticket Amount</p>
+                        </div>
+                        <div class="right">
+                            <p>0</p>
+                        </div>
+                    </div>
+                    <div class="amount">
+                        <div class="left">
+                            <p>Economy Ticket Price</p>
+                        </div>
+                        <div class="right">
+                            <p>$100</p>
+                        </div>
+                    </div>
+                    <div class="amount">
+                        <div class="left">
+                            <p>Economy Ticket Amount</p>
+                        </div>
+                        <div class="right">
+                            <p>0</p>
+                        </div>
+                    </div>
+                    <div class="amount">
+                        <div class="left">
+                            <p>Subtotal</p>
+                        </div>
+                        <div class="right">
+                            <p>0</p>
+                        </div>
+                    </div>
+                    <div class="amount">
+                        <div class="left">
+                            <p>Charge 10% VAT</p>
+                        </div>
+                        <div class="right">
+                            <p>0</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="amount">
+                        <div class="left">
+                            <h3>Total</h3>
+                        </div>
+                        <div class="right">
+                            <h3>0</h3>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button style="background-color: #2cf15d; font-size: large;" class="btn btn-primary" type="button">PRINT</button>
+                        
+                      </div>
+                </div>
             </div>
         </section>
     </main>
 
-<script src="calculation.js"></script>
+
+    <script src="calculation.js"></script>
 </body>
 
 </html>

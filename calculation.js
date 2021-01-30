@@ -1,18 +1,3 @@
-
-document.getElementById('firstClass-plus-btn').addEventListener('click', function () {
-    clickAction(true, captureAndConvertNum('firstClass-ticket'), 'firstClass-ticket');
-    
-})
-document.getElementById('firstClass-minus-btn').addEventListener('click', function () {
-    clickAction(false, captureAndConvertNum('firstClass-ticket'), 'firstClass-ticket');
-})
-document.getElementById('economy-plus-btn').addEventListener('click', function () {
-    clickAction(true, captureAndConvertNum('economy-ticket'), 'economy-ticket');
-})
-document.getElementById('economy-minus-btn').addEventListener('click', function () {
-    clickAction(false, captureAndConvertNum('economy-ticket'), 'economy-ticket');
-})
-
 function clickAction(increase, CaptureInput, inputId) {
     var newTicketNumbers = CaptureInput;
     if (increase == false && newTicketNumbers > 0) {
@@ -42,3 +27,9 @@ function captureAndConvertNum(id) {
     var convertValueNumber = parseInt(captureValue);
     return convertValueNumber;
 }
+
+document.getElementById('booking-btn').addEventListener('click', function(){
+    document.getElementById('bookingInformation').style.display = 'none';
+    document.getElementById('information-summary').style.display = 'block';
+    
+})

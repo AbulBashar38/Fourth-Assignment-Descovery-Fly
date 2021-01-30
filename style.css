@@ -33,10 +33,12 @@ nav ul li a{
     color: #fff;
     padding: 10px;
     text-transform: uppercase;
+    text-decoration: none;
 }
 nav ul li a:hover, a.active{
     background-color: #3352F2;
     border-radius: 5px;
+    color: white;
 }
 .main-content{
     display: grid;
@@ -124,4 +126,19 @@ nav ul li a:hover, a.active{
 .amount{
     display: flex;
     justify-content: space-between;
+}
+#information-summary{
+    color: black;
+    display: none;
+    margin-top: 30px;
+}
+.head-text{
+    text-align: center;
+    color: white;
+}
+.information-style{
+    background-color: white;
+    margin-top: 20px;
+    padding: 100px;
+    border-radius: 20px;
 }
