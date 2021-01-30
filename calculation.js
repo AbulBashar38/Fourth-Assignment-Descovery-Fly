@@ -42,6 +42,10 @@ document.getElementById('booking-btn').addEventListener('click', function(){
     summaryInformationAmount('vat-id', 'replace-vat');
     summaryInformationAmount('total-id', 'replace-total');
 
+    var randomNum = Math.random()*10000000000;
+    var onlyNumber = Math.round(randomNum);
+    document.getElementById('confirmationNumbers').innerText = onlyNumber;
+
 })
 function summaryInformation(bookingId, summaryId) {
     var currentLocation = document.getElementById(bookingId).value;
@@ -51,3 +55,8 @@ function summaryInformationAmount(bookingId, summaryId) {
     var currentLocation = document.getElementById(bookingId).innerText;
    document.getElementById(summaryId).innerText = currentLocation;
 }
+
+    
+    
+
+
