@@ -31,5 +31,22 @@ function captureAndConvertNum(id) {
 document.getElementById('booking-btn').addEventListener('click', function(){
     document.getElementById('bookingInformation').style.display = 'none';
     document.getElementById('information-summary').style.display = 'block';
-    
+    summaryInformation('takeOff-id', 'replace-takeOff');
+    summaryInformation('destination-id', 'replace-destination');
+    summaryInformation('departure-date', 'replace-departure');
+    summaryInformation('return-date', 'replace-return');
+    summaryInformation('firstClass-ticket', 'replace-firstClass');
+    summaryInformation('economy-ticket', 'replace-economy');
+    summaryInformationAmount('subtotal-id', 'replace-subtotal');
+    summaryInformationAmount('vat-id', 'replace-vat');
+    summaryInformationAmount('total-id', 'replace-total');
+
 })
+function summaryInformation(bookingId, summaryId) {
+    var currentLocation = document.getElementById(bookingId).value;
+   document.getElementById(summaryId).innerText = currentLocation;
+}
+function summaryInformationAmount(bookingId, summaryId) {
+    var currentLocation = document.getElementById(bookingId).innerText;
+   document.getElementById(summaryId).innerText = currentLocation;
+}

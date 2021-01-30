@@ -36,20 +36,20 @@
                 <h3>Booking Flights</h3>
                 <div class="input-group">
                     <label for="">Flying From</label>
-                    <input class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
+                    <input id = "takeOff-id" class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
                 </div>
                 <div class="input-group">
                     <label for="">Flying To</label>
-                    <input class="inp-style" type="text" name="" placeholder="New York, United States">
+                    <input id="destination-id" class="inp-style" type="text" name="" placeholder="New York, United States">
                 </div>
                 <div class="inputs">
                     <div class="input-group">
                         <label" for="">Departure</label>
-                            <input class="inp-style" type="date" name="">
+                            <input id="departure-date" class="inp-style" type="date" name="">
                     </div>
                     <div class="input-group">
                         <label for="">Return</label>
-                        <input class="inp-style" type="date" name="">
+                        <input id="return-date" class="inp-style" type="date" name="">
                     </div>
                 </div>
                 <div class="input-group f-class">
@@ -136,37 +136,37 @@
                 <hr>
                 <div>
                     <h4 style="color: #2cf15d; margin-bottom: 20px;">Summary</h4>
-                    <div class="amount">
+                    <div class="amount underline">
                         <div class="left">
                             <p>Flying From</p>
                         </div>
                         <div class="right">
-                            <p>Dhaka,Bangladesh</p>
+                            <p><span id="replace-takeOff">Dhaka,Bangladesh</span> </p>
                         </div>
                     </div>
-                    <div class="amount">
+                    <div class="amount underline">
                         <div class="left">
                             <p>Flying To</p>
                         </div>
                         <div class="right">
-                            <p>Khulna</p>
+                            <p><span id="replace-destination">Khulna</span></p>
                         </div>
                     </div>
-                    <div class="amount">
+                    <div class="amount underline">
                         <div class="left">
                             <p>Departure</p>
                         </div>
                         <div class="right">
-                            <p>10/12/2019</p>
+                            <p><span id="replace-departure">14/02/2021</span></p>
                         </div>
                     </div>
-                    <div class="amount">
+                    <div class="amount underline">
                         <div class="left">
                             <p>Return</p>
                         </div>
-                        <div class="right">15/12/2019</div>
+                        <div class="right"><span id="replace-return">20/02/2021</span></div>
                     </div>
-                    <div class="amount">
+                    <div class="amount underline">
                         <div class="left">
                             <p>First Class Ticket Price</p>
                         </div>
@@ -174,15 +174,15 @@
                             <p>$150</p>
                         </div>
                     </div>
-                    <div class="amount">
+                    <div class="amount underline">
                         <div class="left">
                             <p>First Class Ticket Amount</p>
                         </div>
                         <div class="right">
-                            <p>0</p>
+                            <p><span id="replace-firstClass">0</span></p>
                         </div>
                     </div>
-                    <div class="amount">
+                    <div class="amount underline">
                         <div class="left">
                             <p>Economy Ticket Price</p>
                         </div>
@@ -190,20 +190,20 @@
                             <p>$100</p>
                         </div>
                     </div>
-                    <div class="amount">
+                    <div class="amount underline">
                         <div class="left">
                             <p>Economy Ticket Amount</p>
                         </div>
                         <div class="right">
-                            <p>0</p>
+                            <p><span id="replace-economy">0</span></p>
                         </div>
                     </div>
-                    <div class="amount">
+                    <div class="amount underline">
                         <div class="left">
                             <p>Subtotal</p>
                         </div>
                         <div class="right">
-                            <p>0</p>
+                            <p><span id="replace-subtotal">0</span></p>
                         </div>
                     </div>
                     <div class="amount">
@@ -211,7 +211,7 @@
                             <p>Charge 10% VAT</p>
                         </div>
                         <div class="right">
-                            <p>0</p>
+                            <p><span id="replace-vat">0</span></p>
                         </div>
                     </div>
                     <hr>
@@ -220,7 +220,7 @@
                             <h3>Total</h3>
                         </div>
                         <div class="right">
-                            <h3>0</h3>
+                            <h3><span id="replace-total">0</span></h3>
                         </div>
                     </div>
                     <div class="d-grid gap-2 col-6 mx-auto">
